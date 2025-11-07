@@ -15,7 +15,7 @@ export function buildNixSyntax(hostSpec, embeddedSpecs) {
             'comment': `${lang.name}-formatted strings`,
 
             'begin': String.raw`(/\*(?i:${lang.id_choice_re})\*/)\s*(\'\')`,
-            'end': String.raw`\'\'(?!\$|\'|\\.)`,
+			'end': String.raw`\s*(\'\'(?!\$|\'|\\.))`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
             'name': 'string.quoted.other.nix',
@@ -24,7 +24,7 @@ export function buildNixSyntax(hostSpec, embeddedSpecs) {
                 '2': { 'name': 'punctuation.definition.string.other.start.nix' },
             },
             'endCaptures': {
-                '0': { 'name': 'punctuation.definition.string.other.end.nix' },
+                '1': { 'name': 'punctuation.definition.string.other.end.nix' },
             },
         };
     });
