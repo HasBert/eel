@@ -1,0 +1,8 @@
+{
+	"scopeName": "source.shell",
+	"name": "Shell (minimal for tests)",
+	"patterns": [
+		{ "name": "support.function.shell", "match": "\\b(echo|printf)\\b" },
+		{ "name": "string.quoted.double.shell", "begin": "\"", "end": "\"" }
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"checks": [
+		{
+			"match": "#my-id",
+			"hasAny": ["source.css"],
+			"note": "embedded code should be recognised as css"
+		},
+		{
+			"match": "'';",
+			"notHasAny": ["source.css"],
+			"note": "nix multiline end should not be css"
+		}
+	]
+}

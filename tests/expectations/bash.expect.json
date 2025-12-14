@@ -1,0 +1,19 @@
+{
+	"checks": [
+		{
+			"match": "echo",
+			"hasAny": ["source.bash", "source.shell"],
+			"note": "embedded code should be recognised as bash|shell"
+		},
+		{
+			"match": "'';",
+			"notHasAny": ["source.bash", "source.shell"],
+			"note": "nix multiline end should not be bash|shell"
+		},
+		{
+			"match": "'';",
+			"hasAny": ["punctuation.definition.string.other.end.nix"],
+			"note": "nix multiline end should be punctuation.definition.string.other.end.nix"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"scopeName": "source.css",
+	"name": "CSS (minimal for tests)",
+	"patterns": [
+		{ "name": "entity.name.tag.css", "match": "\\b([a-zA-Z_-][a-zA-Z0-9_-]*)\\b(?=\\s*\\{)" },
+		{ "name": "support.type.property-name.css", "match": "\\b(color|background|margin|padding)\\b" }
+	]
+}

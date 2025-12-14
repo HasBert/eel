@@ -14,8 +14,8 @@ export function buildNixSyntax(hostSpec, embeddedSpecs) {
         return {
             'comment': `${lang.name}-formatted strings`,
 
-            'begin': String.raw`(/\*(?i:${lang.id_choice_re})\*/)\s*(\'\')`,
-			'end': String.raw`\s*(\'\'(?!\$|\'|\\.))`,
+            'begin': String.raw`(/\*\s*(?i:${lang.id_choice_re})\s*\*/)\s*(\'\')`,
+            'end': String.raw`\s*(\'\'(?!\$|\'|\\.))`,
             'contentName': `meta.embedded.block.${lang.vsname}.${hostSpec.vsname} ${lang.root_scope}`,
             'patterns': [{ 'include': `${lang.root_scope}` }],
             'name': 'string.quoted.other.nix',

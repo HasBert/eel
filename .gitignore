@@ -2,4 +2,6 @@
 *.vsix
 */node_modules
 */package-lock.json
+!tests/package-lock.json
 .task/checksum/install-*
+result
